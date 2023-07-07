@@ -1,0 +1,32 @@
+.blue{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.brown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:400px;
+}
+
+.violet {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.color1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+.color2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    gap: 200px;
+}

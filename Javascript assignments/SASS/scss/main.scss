@@ -1,0 +1,79 @@
+@use 'variable';
+@use 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+    place-items: center;
+}
+
+.triangle-left {
+    @include mixins.shape-size();
+    @include mixins.border-size($border-right: 100px solid blue, $border-left:0px);
+   
+}
+
+.triangle-up {
+    @include mixins.shape-size();
+    @include mixins.border-size($border-bottom: 100px solid orange, $border-top:0px);
+ 
+}
+
+.triangle-down {
+    @include mixins.shape-size();
+    @include mixins.border-size($border-top: 100px solid red, $border-bottom:0px);
+
+}
+
+.triangle-right {
+    @include mixins.shape-size();
+    @include mixins.border-size($border-left: 100px solid green, $border-right:0px);
+
+   
+}
+
+.ellipse-horizontal {
+    @include mixins.shape-size($width-size:180px, $height-size:90px);
+    @include mixins.border-radius-size();
+}
+
+.ellipse-vertical {
+    @include mixins.shape-size($width-size:90px, $height-size:180px);
+    @include mixins.border-radius-size();
+}
+
+.rectangle-horizontal {
+    @include mixins.shape-size($width-size:120px, $height-size:80px);
+    
+}
+
+.rectangle-vertical {
+    @include mixins.shape-size($width-size:80px, $height-size:120px);
+
+   
+}
+
+.orange {
+    background-color: variable.$background-color-1;
+}
+
+.red {
+    background-color: variable.$background-color-2;
+}
+
+.green {
+    background-color: variable.$background-color-3;
+}
+
+.blue {
+    background-color: variable.$background-color-4;
+}

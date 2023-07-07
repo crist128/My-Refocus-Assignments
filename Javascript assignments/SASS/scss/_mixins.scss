@@ -1,0 +1,23 @@
+
+@mixin shape-size($width-size:0px , $height-size:0px) {
+    width: $width-size;
+    height: $height-size;
+ }
+ @mixin border-radius-size () {
+     border-radius : 50%;
+ }
+ 
+ @mixin border-size (
+     $border-top: 100px solid transparent,
+     $border-bottom: 100px solid transparent,
+     $border-left: 100px solid transparent,
+     $border-right: 100px solid transparent,
+ )
+ {
+     border-top: $border-top;
+     border-bottom: $border-bottom;
+     border-left: $border-left;
+     border-right: $border-right;
+ 
+ }
+ 
